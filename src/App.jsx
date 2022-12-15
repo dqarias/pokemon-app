@@ -1,11 +1,20 @@
-import react, { useEffect } from 'react'
+import react, { useState, useEffect } from 'react'
 import './App.scss'
 import PokemonData from './services/pokemonAPI'
 
 function App() {
+
+  const [pokemons, setPokemons] = useState([])
+
   useEffect(()=>{
-    console.log(PokemonData())
+    setPokemons(PokemonData)
   },[])
+
+  console.log(pokemons)
+
+ 
+
+
 
   return (
     <div className="App">
