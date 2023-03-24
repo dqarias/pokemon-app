@@ -16,4 +16,12 @@ export default class PokeApiService {
             return []
         }
     }
+
+    getPokemonUrl = async () => {
+        try{
+            const { data } = await this.api.get()
+        }catch(error){
+            return []
+        }
+    }
 }
