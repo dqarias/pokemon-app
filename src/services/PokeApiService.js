@@ -17,9 +17,10 @@ export default class PokeApiService {
         }
     }
 
-    getPokemonUrl = async () => {
+    getPokemonUrl = async (pokemon_id) => {
         try{
-            const { data } = await this.api.get()
+            const { data } = await this.api.get(`pokemon/${pokemon_id}`)
+            return data;
         }catch(error){
             return []
         }
