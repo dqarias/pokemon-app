@@ -15,27 +15,24 @@ const renderPokemons = (pokemons) => {
         const pokemonName = document.createElement('h2')
 
         pokemonName.textContent = `${pokemon.name}`
-        const renderPokemon = displayPokemon(pokemonIdUrl)
+        displayPokemon(pokemonIdUrl, pokemonCardBody)
         pokemonCardBody.append(pokemonName)
-   
-        pokemonCardBody.append(renderPokemon)
         pokemonCard.appendChild(pokemonCardBody)
         pokemonsContainer.appendChild(pokemonCard)
         pokemonsMain.appendChild(pokemonsContainer)
     });
 }
 
-const renderPokemon = async (pokemonById) => {
+const renderPokemon = async (pokemonById, pokemonCardBody) => {
     console.log(pokemonById)
     const pokemonImg = document.createElement('img')
-    pokemonImg.setAttribute('src', pokemonById.sprites.other.dream_world
-    .front_default)
-    
+    pokemonImg.setAttribute('src', pokemonById.sprites.other["official-artwork"].front_default)
+    pokemonCardBody.appendChild(pokemonImg)
 }
 
-const displayPokemon = async (pokemonIdUrl) =>{
+const displayPokemon = async (pokemonIdUrl, pokemonCardBody) =>{
     const pokemon = await pokeApiService.getPokemonUrl(pokemonIdUrl)
-    renderPokemon(pokemon)
+    renderPokemon(pokemon, pokemonCardBody)
 }
 
 export default renderPokemons;
