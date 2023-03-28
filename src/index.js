@@ -1,5 +1,8 @@
 import PokeApiService from "./services/PokeApiService";
 import renderPokemons from "./showPokemon";
+import searchPokemon from "./searchPokemon";
+
+import "./style.css";
 
 const pokeApiService = new PokeApiService();
 
@@ -10,3 +13,4 @@ const displayPokemon = async () => {
 }
 
 displayPokemon();
+searchPokemon();
