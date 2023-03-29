@@ -5,13 +5,13 @@ const pokeApiService = new PokeApiService();
 const pokemonsMain = document.querySelector('.pokemons__container')
 
 const renderPokemons = (pokemons) => {
+    pokemonsMain.innerHTML = ""
     pokemons.forEach(pokemon => {
         const pokemonIdUrl = pokemon.url.slice(34, -1)
         const pokemonsContainer = document.createElement('section');
         const pokemonCard = document.createElement('article');
         const pokemonCardHead = document.createElement('div');
         const pokemonCardBody = document.createElement('div');
-        
         const pokemonName = document.createElement('h2')
 
         pokemonName.textContent = `${pokemon.name}`
