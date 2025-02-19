@@ -22,7 +22,11 @@
   },
   "homepage": "https://github.com/dqarias/webpack-boilerplate#readme",
   "dependencies": {
+    "ajv": "^8.8.2",
+    "ajv-keywords": "^5.1.0",
     "axios": "^1.7.9",
+    "got": "^14.4.6",
+    "hint": "^7.1.13",
     "ws": "^8.18.0"
   },
   "devDependencies": {
@@ -31,7 +35,6 @@
     "eslint": "^7.32.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.26.0",
-    "hint": "^7.1.13",
     "html-webpack-plugin": "^5.5.0",
     "style-loader": "^3.3.1",
     "stylelint": "^16.14.1",
